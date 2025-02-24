@@ -17,3 +17,11 @@ export async function getUser(req, res) {
         res.status(500).json({ message: "Database error" });
     }
 }
+
+export async function test(req, res) {
+    const clientID = process.env.GOOGLE_CLIENT_ID
+    return res.status(500).json({
+        message: clientID
+    })
+
+}
